@@ -26,8 +26,9 @@ class App extends Component {
   
   formSubmitted(event){
     event.preventDefault();
-    console.log(this.state.newTodo);
+    
     this.setState({
+      newTodo: '',
       todos: [...this.state.todos, {
         title: this.state.newTodo,
         done: false
@@ -42,7 +43,7 @@ class App extends Component {
         <h3>{this.state.message}</h3>
         <form onSubmit={(event)=>this.formSubmitted(event)}>
           <label htmlFor="newTodo">New Todo</label>
-          <input onChange={(event)=>this.newTodoChanged(event)} id="newTodo" name="newTodo"/>
+          <input onChange={(event)=>this.newTodoChanged(event)} id="newTodo" name="newTodo" value={this.state.newTodo}/>
           <button type="submit">Add Todo</button>
         </form>
         <ul>
