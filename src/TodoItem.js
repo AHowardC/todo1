@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TodoItem = (props)=>{
-    const {todo, index} = props;
+    const { todo, index } = props;
     return(
         <li>
               <input onChange={(event)=>props.toggleTodoDone(event, index)} type='checkbox' checked={todo.done}/>
