@@ -76,12 +76,7 @@ class App extends Component {
          newTodo={this.state.newTodo}
          formSubmitted={this.formSubmitted.bind(this)} 
          newTodoChanged={this.newTodoChanged.bind(this)}/>
-        {/*<form onSubmit={(event)=>this.formSubmitted(event)}>
-          <label htmlFor="newTodo">New Todo</label>
-          <input onChange={(event)=>this.newTodoChanged(event)} id="newTodo" name="newTodo" value={this.state.newTodo}/>
-          <button type="submit">Add Todo</button>
-        </form>*/}
-        <button onClick={()=>{this.allDone()}}>All Done</button>
+        <button onClick={()=>this.allDone()}>All Done</button>
         <TodoList
         todos={this.state.todos}
         toggleTodoDone={this.toggleTodoDone.bind(this)}
