@@ -16,9 +16,6 @@ class App extends Component {
     };
   }
   
-  
-  
-  
   newTodoChanged(event){  
     this.setState({
       newTodo: event.target.value
